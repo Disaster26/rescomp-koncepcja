@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pogotowie komputerowe Swarzędz i Poznań - RESCOMP, serwis komputerowy</title>
+<meta name="description" content="RESCOMP: naprawa komputerów, laptopów i drukarek, sieci i Wi-Fi, odzyskiwanie danych. Serwis w Swarzędzu, dojazd do klienta w Poznaniu i okolicy. Tel. 603 043 430.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#1F262D">
+<link rel="icon" href="logo/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="logo/favicon-48.png" sizes="48x48" type="image/png">
+<link rel="apple-touch-icon" href="logo/favicon-180.png">
+<link rel="preload" href="fonts/ubuntusans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="img/hero-m-600.webp" imagesrcset="img/hero-m-600.webp 600w, img/hero-m-900.webp 900w, img/hero-m-1200.webp 1200w" imagesizes="100vw" media="(max-width:760px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-1600.webp" imagesrcset="img/hero-1000.webp 1000w, img/hero-1600.webp 1600w, img/hero-2400.webp 2400w, img/hero-2800.webp 2800w" imagesizes="100vw" media="(min-width:761px)" fetchpriority="high">
+<style>
+@font-face{font-family:"Ubuntu Sans";font-weight:400 800;font-display:swap;src:url(fonts/ubuntusans-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+2013,U+2019,U+201C-201E,U+2022}
+@font-face{font-family:"Ubuntu Sans";font-weight:400 800;font-display:swap;src:url(fonts/ubuntusans-latin-ext.woff2) format("woff2");unicode-range:U+0100-024F}
+:root{--ink:#1F262D;--cyan:#00ADEF;--cyan-d:#0079AD;--szary:#EEF1F4;--linia:#D9DEE3;--ciemny:#14191E;--tekst:#3A434C;--r:14px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:#fff;color:var(--tekst);font:400 17px/1.6 "Ubuntu Sans",system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--cyan-d)}
+h1,h2,h3{color:var(--ink);font-weight:700;line-height:1.15;letter-spacing:-.015em;margin:0}
+h2{font-size:clamp(30px,3.4vw,46px)}
+h3{font-size:21px}
+p{margin:0 0 1em}
+.wrap{width:min(1240px,100% - 32px);margin:0 auto}
+section{padding:clamp(64px,8vw,112px) 0}
+.intro{max-width:640px;margin:16px 0 0;font-size:18px}
+.btn{display:inline-flex;align-items:center;gap:12px;min-height:54px;padding:0 26px;border-radius:10px;background:var(--cyan);color:#fff;font-weight:700;font-size:18px;text-decoration:none;border:0;cursor:pointer;font-family:inherit;transition:background .2s,transform .2s}
+.btn:hover{background:#0098D4}
+.btn:active{transform:translateY(1px)}
+.btn-ink{background:var(--ink)}
+.btn-ink:hover{background:#000}
+.btn .tel{display:inline-block;width:20px;height:20px;flex:none}
+/* krzyzyk ratunkowy z litery O */
+.plus{list-style:none;margin:0;padding:0}
+.plus li{position:relative;padding-left:30px;margin:0 0 12px}
+.plus li::before,.plus li::after{content:"";position:absolute;background:var(--cyan);border-radius:1px}
+.plus li::before{left:4px;top:.8em;width:14px;height:4px;margin-top:-2px}
+.plus li::after{left:9px;top:.8em;width:4px;height:14px;margin-top:-7px}
+/* ekran z logo: ramka + "dziobek" u dolu */
+.ekran{position:relative;border:4px solid var(--ink);border-radius:var(--r);background:var(--ink);margin-bottom:12px}
+.ekran img{border-radius:9px;width:100%;height:100%;object-fit:cover}
+.ekran::after{content:"";position:absolute;left:50%;bottom:-13px;width:26px;height:12px;margin-left:-13px;background:var(--ink);clip-path:polygon(0 0,100% 0,50% 100%)}
+
+/* naglowek */
+.top{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--linia)}
+.top .wrap{display:flex;align-items:center;gap:24px;height:76px}
+.logo{display:block;flex:none}
+.logo img{height:40px;width:auto}
+.nav{display:flex;gap:4px;margin-left:auto}
+.nav a{color:var(--ink);text-decoration:none;font-weight:500;padding:10px 14px;border-radius:8px}
+.nav a:hover{background:var(--szary)}
+.top .btn{min-height:46px;font-size:16px;padding:0 18px}
+.burger{display:none;margin-left:8px;width:46px;height:46px;border:0;border-radius:10px;background:var(--szary);cursor:pointer;padding:0}
+.burger span{display:block;width:20px;height:2.5px;background:var(--ink);margin:4px auto;border-radius:2px;transition:transform .2s,opacity .2s}
+.menu-open .burger span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.menu-open .burger span:nth-child(2){opacity:0}
+.menu-open .burger span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+/* pierwszy ekran */
+.hero{position:relative;display:flex;align-items:center;min-height:calc(100svh - 76px);max-height:1000px;padding:56px 0 64px;color:#fff;overflow:hidden;background:var(--ciemny)}
+.hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero picture img{object-position:62% 50%}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(14,18,22,.92) 0%,rgba(14,18,22,.8) 34%,rgba(14,18,22,.25) 62%,rgba(14,18,22,0) 80%)}
+.hero .wrap{position:relative;z-index:2}
+.hero-txt{max-width:620px}
+.hero h1{color:#fff;font-size:clamp(38px,4.6vw,66px);letter-spacing:-.025em}
+.hero .lead{font-size:clamp(18px,1.5vw,21px);line-height:1.55;margin:22px 0 0;color:#E7EAED;max-width:560px}
+.hero-cta{margin-top:32px}
+.hero .fakty{margin:28px 0 0;padding:18px 0 0;border-top:1px solid rgba(255,255,255,.22);font-size:16px;color:#CBD2D8;max-width:560px}
+.hero .fakty b{color:#fff;font-weight:600}
+/* linia wody u dolu pierwszego ekranu */
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:10px;z-index:2;background:var(--cyan)}
+
+/* oferta */
+.oferta-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.strzalki{display:flex;gap:10px}
+.strzalki button{width:52px;height:52px;border-radius:10px;border:2px solid var(--ink);background:#fff;cursor:pointer;display:grid;place-items:center;transition:background .2s}
+.strzalki button:hover{background:var(--szary)}
+.strzalki svg{width:20px;height:20px}
+.pas{display:flex;gap:28px;overflow-x:auto;scroll-snap-type:x mandatory;padding:40px 16px 12px;margin:0 -16px;scrollbar-width:none;cursor:grab;scroll-padding-inline:16px;overscroll-behavior-x:contain}
+.pas::-webkit-scrollbar{display:none}
+.pas.drag{cursor:grabbing;scroll-snap-type:none}
+.pas.drag *{user-select:none;pointer-events:none}
+.karta{flex:0 0 calc((100% - 56px)/3);scroll-snap-align:start;min-width:0}
+.karta .ekran{aspect-ratio:4/3}
+.karta h3{margin:28px 0 12px}
+.karta .plus li{margin-bottom:8px;font-size:16px}
+
+/* jak pracujemy */
+.szary{background:var(--szary)}
+.dwa{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,96px);align-items:center}
+.dwa .ekran{aspect-ratio:4/3}
+.dwa h2{margin-bottom:28px}
+
+/* cennik */
+.cennik{display:grid;grid-template-columns:1fr 1fr;gap:0 64px;margin-top:40px}
+.poz{display:flex;justify-content:space-between;gap:24px;padding:16px 0;border-bottom:1px solid var(--linia)}
+.poz span{color:var(--ink)}
+.poz b{color:var(--ink);white-space:nowrap;font-weight:700}
+.poz b.gratis{color:var(--cyan-d)}
+.uwaga{margin-top:24px;font-size:15px;color:#5D6772}
+
+/* dla firm: ekran z logo - ciemna gora, woda u dolu */
+.firmy{background:var(--ciemny);color:#C9D0D6;padding-bottom:0}
+.firmy h2{color:#fff;margin-bottom:24px}
+.firmy .plus li{color:#E7EAED}
+.firmy .ekran{border-color:#E7E7E8;background:#E7E7E8;aspect-ratio:4/3.4}
+.firmy .ekran::after{background:#E7E7E8}
+.woda{background:var(--cyan);margin-top:clamp(56px,7vw,96px);padding:34px 0}
+.woda .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px 32px;flex-wrap:wrap}
+.woda p{margin:0;color:#fff;font-size:clamp(20px,2vw,26px);font-weight:700;line-height:1.3;color:#06222F}
+
+/* dojazd */
+.miasta{columns:3;column-gap:32px;margin-top:8px}
+.miasta li{break-inside:avoid}
+.dojazd-box{background:#fff;border-radius:var(--r);padding:clamp(24px,3vw,40px);border:1px solid var(--linia)}
+.dojazd-box h3{margin-bottom:14px}
+
+/* pytania */
+.faq-grid{display:grid;grid-template-columns:1fr 1.7fr;gap:clamp(32px,5vw,80px);align-items:start}
+.faq-head{position:sticky;top:110px}
+.faq{border-top:1px solid var(--linia)}
+.faq details{border-bottom:1px solid var(--linia)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 48px 22px 0;position:relative;font-weight:600;font-size:19px;color:var(--ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before,.faq summary::after{content:"";position:absolute;right:8px;top:50%;background:var(--cyan);border-radius:1px;transition:transform .25s}
+.faq summary::before{width:18px;height:4px;margin-top:-2px}
+.faq summary::after{width:4px;height:18px;margin-top:-9px;right:15px}
+.faq details[open] summary::after{transform:scaleY(0)}
+.faq details p{margin:0 0 22px;max-width:780px}
+
+/* kontakt */
+.kontakt-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(36px,5vw,72px);margin-top:40px}
+.dane p,.dane .blok{margin:0 0 18px}
+.dane .duzy{font-size:clamp(28px,3vw,38px);font-weight:700;color:var(--ink);text-decoration:none;letter-spacing:-.01em}
+.dane h3{font-size:17px;margin:0 0 4px}
+form{display:grid;gap:14px;background:#fff;padding:clamp(22px,3vw,36px);border-radius:var(--r);border:1px solid var(--linia)}
+label{font-weight:600;font-size:15px;color:var(--ink);display:grid;gap:6px}
+input,textarea{font:inherit;font-size:16px;padding:13px 14px;border:1.5px solid #C4CBD2;border-radius:8px;width:100%;background:#fff;color:var(--ink)}
+input:focus,textarea:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 3px rgba(0,173,239,.18)}
+textarea{min-height:120px;resize:vertical}
+.form-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-info{font-size:14px;color:#5D6772;margin:0}
+.mapa{margin-top:clamp(40px,5vw,64px);border-radius:var(--r);overflow:hidden;height:380px;background:#DCE1E6;border:4px solid var(--ink)}
+.mapa iframe{width:100%;height:100%;border:0;display:block}
+
+/* stopka */
+.stopka{background:var(--ciemny);color:#AEB6BE;padding:56px 0 28px;font-size:15px}
+.stopka .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+.stopka img{height:38px;width:auto;margin-bottom:16px}
+.stopka a{color:#E7E7E8;text-decoration:none}
+.stopka a:hover{color:#fff}
+.stopka h3{color:#fff;font-size:16px;margin:0 0 10px}
+.stopka p{margin:0 0 6px}
+.dol{grid-column:1/-1;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid #2A333B;padding-top:22px;margin-top:12px}
+{{BADGE_STYLE}}
+
+@media (max-width:1060px){
+  .nav{display:none}
+  .burger{display:block}
+  .top .btn{margin-left:auto}
+  .menu-open .nav{display:flex;flex-direction:column;position:fixed;left:0;right:0;top:76px;bottom:0;background:#fff;padding:20px 16px;gap:2px;overflow:auto}
+  .menu-open .nav a{font-size:22px;padding:16px 12px;border-bottom:1px solid var(--linia);border-radius:0}
+  .karta{flex-basis:calc((100% - 28px)/2)}
+}
+@media (max-width:760px){
+  body{font-size:16.5px}
+  .top .wrap{height:64px;gap:10px}
+  .menu-open .nav{top:64px}
+  .logo img{height:30px}
+  .top .btn{min-height:44px;padding:0 14px;font-size:15px}
+  .top .btn .txt{display:none}
+  .hero{min-height:calc(100svh - 64px);max-height:none;align-items:flex-end;padding:80px 0 40px}
+  .hero::before{background:linear-gradient(180deg,rgba(14,18,22,.15) 0%,rgba(14,18,22,.45) 30%,rgba(14,18,22,.9) 62%,rgba(14,18,22,.96) 100%)}
+  .hero picture img{object-position:50% 20%}
+  .hero h1{font-size:clamp(32px,9vw,40px)}
+  .hero .lead{margin-top:16px;font-size:17px}
+  .hero-cta{margin-top:26px}
+  .hero .btn{width:100%;justify-content:center}
+  .hero .fakty{margin-top:22px;padding-top:14px;font-size:15px}
+  .strzalki{display:none}
+  .karta{flex-basis:84%}
+  .pas{gap:18px;padding-top:28px}
+  .dwa,.cennik,.kontakt-grid,.form-2,.faq-grid{grid-template-columns:1fr}
+  .faq-head{position:static}
+  .dwa .ekran{order:-1}
+  .miasta{columns:2}
+  .faq summary{font-size:17px}
+  .woda .btn{width:100%;justify-content:center}
+  .stopka .wrap{grid-template-columns:1fr 1fr}
+  .stopka .wrap>div:first-child{grid-column:1/-1}
+  .mapa{height:300px}
+}
+@media (min-width:2200px){
+  body{font-size:19px}
+  .wrap{width:min(1520px,100% - 64px)}
+  .hero h1{font-size:80px}
+  .hero-txt{max-width:760px}.hero .lead,.hero .fakty{max-width:680px}
+  .logo img{height:46px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="top" id="top">
+ <div class="wrap">
+  <a class="logo" href="#top" aria-label="RESCOMP - strona główna"><img src="logo/rescomp-logo.svg" alt="RESCOMP" width="380" height="60"></a>
+  <nav class="nav" id="nav" aria-label="Menu">
+   <a href="#oferta">Oferta</a><a href="#cennik">Cennik</a><a href="#firmy">Dla firm</a><a href="#dojazd">Dojazd</a><a href="#pytania">Pytania</a><a href="#kontakt">Kontakt</a>
+  </nav>
+  <a class="btn" aria-label="Zadzwoń: 603 043 430" href="tel:+48603043430"><svg class="tel" viewBox="0 0 20 20" aria-hidden="true"><path d="M6.2 2.5 8 6.6 6.3 8.2c.9 2.1 2.7 4 4.9 5l1.6-1.8 4.2 1.8-.7 3.6c-7.1.3-13.6-6.2-13.4-13.4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span class="txt">603 043 430</span></a>
+  <button class="burger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+ </div>
+</header>
+
+<main>
+<section class="hero">
+ <picture>
+  <source media="(max-width:760px)" srcset="img/hero-m-600.webp 600w, img/hero-m-900.webp 900w, img/hero-m-1200.webp 1200w" sizes="100vw">
+  <img src="img/hero-1600.webp" srcset="img/hero-1000.webp 1000w, img/hero-1600.webp 1600w, img/hero-2400.webp 2400w, img/hero-2800.webp 2800w" sizes="100vw" width="2800" height="1600" alt="Serwisant wymienia dysk w otwartym laptopie" fetchpriority="high">
+ </picture>
+ <div class="wrap">
+  <div class="hero-txt">
+   <h1>Pogotowie komputerowe Swarzędz i Poznań</h1>
+   <p class="lead">Problem z komputerem? Dzwoń. Przyjedziemy do domu albo firmy, znajdziemy usterkę i ją naprawimy, a gdy trzeba, zabierzemy sprzęt do serwisu w Swarzędzu.</p>
+   <div class="hero-cta"><a class="btn" href="tel:+48603043430"><svg class="tel" viewBox="0 0 20 20" aria-hidden="true"><path d="M6.2 2.5 8 6.6 6.3 8.2c.9 2.1 2.7 4 4.9 5l1.6-1.8 4.2 1.8-.7 3.6c-7.1.3-13.6-6.2-13.4-13.4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Zadzwoń: 603 043 430</a></div>
+   <p class="fakty"><b>Diagnoza gratis</b>, gdy naprawiamy sprzęt. <b>Dojazd gratis</b> do 20 km, gdy naprawa kosztuje od 100 zł. Telefonicznie pomagamy codziennie 8.00-20.00.</p>
+  </div>
+ </div>
+</section>
+
+<section id="oferta">
+ <div class="wrap">
+  <div class="oferta-head">
+   <div>
+    <h2>Co naprawiamy</h2>
+    <p class="intro">Komputery, laptopy, drukarki, sieci i oprogramowanie. Pomagamy firmom i osobom prywatnym w Swarzędzu, Poznaniu i całej Wielkopolsce.</p>
+   </div>
+   <div class="strzalki" aria-hidden="true">
+    <button type="button" data-kier="-1" tabindex="-1"><svg viewBox="0 0 20 20"><path d="M12.5 4 6.5 10l6 6" fill="none" stroke="#1F262D" stroke-width="2.6"/></svg></button>
+    <button type="button" data-kier="1" tabindex="-1"><svg viewBox="0 0 20 20"><path d="m7.5 4 6 6-6 6" fill="none" stroke="#1F262D" stroke-width="2.6"/></svg></button>
+   </div>
+  </div>
+  <div class="pas" id="pas">
+   <article class="karta">
+    <div class="ekran"><img src="img/laptopy-640.webp" srcset="img/laptopy-640.webp 640w, img/laptopy-1200.webp 1200w" sizes="(max-width:760px) 84vw, 400px" width="640" height="853" loading="lazy" alt="Naprawa płyty głównej laptopa"></div>
+    <h3>Laptopy i notebooki</h3>
+    <ul class="plus"><li>naprawa układów na płycie głównej (reballing BGA)</li><li>gniazda zasilania i układy ładowania</li><li>wymiana matryc, podświetlenia i inwerterów</li></ul>
+   </article>
+   <article class="karta">
+    <div class="ekran"><img src="img/komputery-640.webp" srcset="img/komputery-640.webp 640w, img/komputery-1200.webp 1200w" sizes="(max-width:760px) 84vw, 400px" width="640" height="427" loading="lazy" alt="Serwisant montuje podzespoły w komputerze stacjonarnym"></div>
+    <h3>Komputery stacjonarne</h3>
+    <ul class="plus"><li>naprawa, czyszczenie i konserwacja</li><li>modernizacja i przyspieszenie, chłodzenie, wyciszanie</li><li>montaż komputera z Państwa podzespołów</li></ul>
+   </article>
+   <article class="karta">
+    <div class="ekran"><img src="img/drukarki-640.webp" srcset="img/drukarki-640.webp 640w, img/drukarki-1200.webp 1200w" sizes="(max-width:760px) 84vw, 400px" width="640" height="640" loading="lazy" alt="Drukarka wielofunkcyjna w biurze"></div>
+    <h3>Drukarki, monitory, skanery</h3>
+    <ul class="plus"><li>naprawa drukarek laserowych i atramentowych</li><li>naprawa monitorów LCD i ich zasilania</li><li>instalacja urządzeń, tonery i atramenty</li></ul>
+   </article>
+   <article class="karta">
+    <div class="ekran"><img src="img/sieci-640.webp" srcset="img/sieci-640.webp 640w, img/sieci-1200.webp 1200w" sizes="(max-width:760px) 84vw, 400px" width="640" height="427" loading="lazy" alt="Panel krosowy sieci komputerowej z kablami"></div>
+    <h3>Internet i sieci</h3>
+    <ul class="plus"><li>instalacja i konfiguracja modemów i routerów</li><li>sieci przewodowe LAN i bezprzewodowe Wi-Fi</li><li>zabezpieczenie sieci przed niepowołanym dostępem</li></ul>
+   </article>
+   <article class="karta">
+    <div class="ekran"><img src="img/dane-640.webp" srcset="img/dane-640.webp 640w, img/dane-1200.webp 1200w" sizes="(max-width:760px) 84vw, 400px" width="640" height="427" loading="lazy" alt="Odzyskiwanie danych z otwartego dysku twardego"></div>
+    <h3>Dane i wirusy</h3>
+    <ul class="plus"><li>odzyskiwanie danych z dysków i pamięci flash</li><li>usuwanie wirusów, trojanów i rootkitów</li><li>archiwizacja danych, ręczna lub automatyczna</li></ul>
+   </article>
+   <article class="karta">
+    <div class="ekran"><img src="img/system-640.webp" srcset="img/system-640.webp 640w, img/system-1200.webp 1200w" sizes="(max-width:760px) 84vw, 400px" width="640" height="427" loading="lazy" alt="Otwarty laptop na stanowisku serwisowym"></div>
+    <h3>System i programy</h3>
+    <ul class="plus"><li>reinstalacja Windows z zachowaniem programów, dokumentów i zdjęć</li><li>konfiguracja oprogramowania pod Państwa pracę</li><li>wdrożenia i szkolenia z programów</li></ul>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section class="szary" id="jak">
+ <div class="wrap dwa">
+  <div class="ekran"><img src="img/serwis-640.webp" srcset="img/serwis-640.webp 640w, img/serwis-1200.webp 1200w" sizes="(max-width:760px) 92vw, 600px" width="640" height="480" loading="lazy" alt="Rozkręcony laptop z widocznym chłodzeniem i płytą główną"></div>
+  <div>
+   <h2>Cenę znają Państwo przed naprawą</h2>
+   <ul class="plus">
+    <li>Diagnoza jest bezpłatna, gdy zlecają nam Państwo naprawę.</li>
+    <li>Cenę ustalamy przed rozpoczęciem pracy i nigdy nie podnosimy jej po wykonaniu usługi.</li>
+    <li>Naprawiamy na miejscu, u Państwa. Jeśli usterka tego wymaga, zabieramy sprzęt do serwisu.</li>
+    <li>Na wykonane usługi udzielamy gwarancji.</li>
+    <li>Sprzedajemy sprzęt sprawdzonych marek, dlatego części mamy pod ręką, a naprawy są tańsze.</li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section id="cennik">
+ <div class="wrap">
+  <h2>Przykładowe ceny</h2>
+  <p class="intro">Każdą naprawę wyceniamy indywidualnie, zanim się do niej zabierzemy.</p>
+  <div class="cennik">
+   <div>
+    <div class="poz"><span>Diagnoza przy późniejszej naprawie</span><b class="gratis">gratis</b></div>
+    <div class="poz"><span>Diagnoza usterki bez naprawy</span><b>50 zł</b></div>
+    <div class="poz"><span>Pakiet A: reinstalacja systemu i sterowników</span><b>100 zł</b></div>
+    <div class="poz"><span>Pakiet B: pakiet A z zachowaniem danych</span><b>od 150 zł</b></div>
+    <div class="poz"><span>Pakiet C: oczyszczenie i przyspieszenie systemu</span><b>80 zł</b></div>
+    <div class="poz"><span>Usuwanie wirusów (malware, trojan, rootkit)</span><b>od 100 zł</b></div>
+    <div class="poz"><span>Odzyskiwanie danych z dysków i pamięci flash</span><b>od 150 zł</b></div>
+    <div class="poz"><span>Godzina pracy w serwisie</span><b>70 zł</b></div>
+   </div>
+   <div>
+    <div class="poz"><span>Naprawa karty grafiki w laptopie (reballing BGA)</span><b>380 zł</b></div>
+    <div class="poz"><span>Naprawa układu zasilania i ładowania laptopa</span><b>300 zł</b></div>
+    <div class="poz"><span>Wymiana płyty głównej PC lub laptopa</span><b>80 zł</b></div>
+    <div class="poz"><span>Konserwacja komputera lub drukarki</span><b>60 zł</b></div>
+    <div class="poz"><span>Konfiguracja modemu lub routera</span><b>od 50 zł</b></div>
+    <div class="poz"><span>Zabezpieczenie sieci przed niepowołanym dostępem</span><b>od 40 zł</b></div>
+    <div class="poz"><span>Montaż komputera z podzespołów klienta</span><b>120 zł</b></div>
+    <div class="poz"><span>Godzina pracy serwisanta u klienta</span><b>100 zł</b></div>
+   </div>
+  </div>
+  <p class="uwaga">Ceny netto z obecnego cennika RESCOMP. Wystawiamy faktury VAT.</p>
+ </div>
+</section>
+
+<section class="firmy" id="firmy">
+ <div class="wrap dwa">
+  <div>
+   <h2>Stała opieka informatyczna dla firm</h2>
+   <p>Dla firm, które potrzebują serwisu na stałe, mamy pakiety dopasowane do liczby stanowisk i sposobu pracy.</p>
+   <ul class="plus">
+    <li>abonament od 100 zł netto miesięcznie</li>
+    <li>liczbę wizyt w miesiącu ustalamy razem z Państwem</li>
+    <li>reagujemy na zgłoszenie awarii najpóźniej w ciągu doby</li>
+    <li>stała obsługa telefoniczna</li>
+   </ul>
+  </div>
+  <div class="ekran"><img src="img/firmy-640.webp" srcset="img/firmy-640.webp 640w, img/firmy-1200.webp 1200w" sizes="(max-width:760px) 92vw, 600px" width="640" height="731" loading="lazy" alt="Technik podłącza okablowanie w szafie sieciowej"></div>
+ </div>
+ <div class="woda">
+  <div class="wrap">
+   <p>Zapytaj o pakiet serwisowy dla swojej firmy.</p>
+   <a class="btn btn-ink" href="#kontakt">Napisz do nas</a>
+  </div>
+ </div>
+</section>
+
+<section class="szary" id="dojazd">
+ <div class="wrap dwa">
+  <div>
+   <h2>Dojazd w Poznaniu i okolicy</h2>
+   <p>Najwygodniej naprawić sprzęt tam, gdzie pracuje. Do klientów w promieniu 20 km od Swarzędza dojeżdżamy bezpłatnie, jeśli naprawa kosztuje co najmniej 100 zł. W pozostałych przypadkach dojazd kosztuje 1 zł za kilometr, a przy poważniejszych naprawach ustalamy go indywidualnie.</p>
+  </div>
+  <div class="dojazd-box">
+   <h3>Gdzie dojeżdżamy</h3>
+   <ul class="plus miasta"><li>Poznań</li><li>Swarzędz</li><li>Pobiedziska</li><li>Kostrzyn</li><li>Kleszczewo</li><li>Kórnik</li><li>Komorniki</li><li>Luboń</li><li>Suchy Las</li><li>Czerwonak</li><li>Murowana Goślina</li></ul>
+  </div>
+ </div>
+</section>
+
+<section id="pytania">
+ <div class="wrap faq-grid">
+  <div class="faq-head"><h2>Najczęstsze pytania</h2><p class="intro">Nie ma tu Państwa problemu? Proszę zadzwonić pod <a href="tel:+48603043430">603 043 430</a>, podpowiemy przez telefon, co się dzieje.</p></div>
+  <div class="faq">
+   <details><summary>Zawiesza się komputer?</summary><p>Najczęściej winny jest system obciążony niepotrzebnymi procesami albo wadliwy podzespół. Poza dokładną diagnozą systemu sprawdzamy też ogólny stan komputera: głośność i temperaturę pracy oraz chłodzenie. Diagnoza jest u nas bezpłatna.</p></details>
+   <details><summary>Nie działa internet?</summary><p>Zwykle to błąd konfiguracji routera albo wirus, choć czasem winna jest sama wtyczka. Sprawdzamy ustawienia routera i systemu, usuwamy luki i skanujemy komputer, żeby awaria się nie powtarzała.</p></details>
+   <details><summary>Nie włącza się laptop?</summary><p>Prawdopodobnie uszkodzony jest układ grafiki, chipsetu albo zasilania i trzeba otworzyć obudowę. Naprawiamy układy na płycie głównej (reballing), gniazda zasilania i słuchawkowe, wymieniamy matryce, świetlówki i inwertery. Na usługi udzielamy gwarancji.</p></details>
+   <details><summary>Drukarka nie drukuje?</summary><p>Czasem do środka dostaje się ciało obce i trzeba prześledzić drogę papieru. Bywa też, że drukarka nie komunikuje się z systemem: sprawdzamy połączenia, udostępnianie drukarek sieciowych i sterowniki.</p></details>
+   <details><summary>Nic nie wyświetla się na monitorze?</summary><p>Przyczyną może być awaria podświetlenia, którą usuwamy, wymieniając świetlówki lub inwertery. Gdy monitor nie daje znaku życia albo wydaje niepokojące dźwięki, naprawiamy zasilanie. Sprawdzamy też wtyczki, gniazda i kartę graficzną.</p></details>
+   <details><summary>Ile kosztuje dojazd?</summary><p>W promieniu 20 km od Swarzędza dojazd jest bezpłatny, jeśli naprawa kosztuje co najmniej 100 zł. W innym wypadku 1 zł za kilometr. Przy poważniejszych naprawach cenę dojazdu ustalamy indywidualnie.</p></details>
+   <details><summary>Za co Państwo płacą?</summary><p>Za wykonaną usługę, dzięki której sprzęt znowu sprawnie działa. Nie płacą Państwo za diagnozę przy naprawie ani za dojazd, gdy naprawa przekracza 100 zł, a miejsce jest w promieniu 20 km od serwisu.</p></details>
+  </div>
+ </div>
+</section>
+
+<section class="szary" id="kontakt">
+ <div class="wrap">
+  <h2>Kontakt</h2>
+  <div class="kontakt-grid">
+   <div class="dane">
+    <p><a class="duzy" href="tel:+48603043430">603 043 430</a><br>wsparcie telefoniczne 8.00-20.00</p>
+    <div class="blok"><h3>Serwis</h3>Serwis Komputerowy RESCOMP<br>ul. Warszawska 38, 62-020 Swarzędz</div>
+    <div class="blok"><h3>Godziny otwarcia punktu</h3>poniedziałek-piątek 9.00-16.00<br>sobota 9.00-14.00</div>
+    <div class="blok"><h3>E-mail</h3><a href="mailto:serwis@rescomp.pl">serwis@rescomp.pl</a></div>
+    <p>NIP 777-173-51-92</p>
+   </div>
+   <form onsubmit="event.preventDefault();this.querySelector('.form-info').textContent='To podgląd strony, formularz zacznie wysyłać wiadomości po wdrożeniu.'">
+    <div class="form-2">
+     <label>Imię i nazwisko<input name="imie" autocomplete="name" required></label>
+     <label>Telefon<input name="tel" type="tel" autocomplete="tel" required></label>
+    </div>
+    <label>E-mail<input name="email" type="email" autocomplete="email"></label>
+    <label>Co się dzieje ze sprzętem?<textarea name="opis" required></textarea></label>
+    <button class="btn" type="submit">Wyślij zgłoszenie</button>
+    <p class="form-info">Oddzwonimy i podamy cenę przed naprawą.</p>
+   </form>
+  </div>
+  <div class="mapa" id="mapa" data-src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2433.7875771501645!2d17.078469999999996!3d52.410526000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47045ecae24a55e9%3A0xa8b71c100bb98d8c!2sSerwis+Komputerowy+ResComp!5e0!3m2!1spl!2spl!4v1400934944371"></div>
+ </div>
+</section>
+</main>
+
+<footer class="stopka">
+ <div class="wrap">
+  <div>
+   <img src="logo/rescomp-logo-jasne.svg" alt="RESCOMP" width="380" height="60">
+   <p>Pogotowie komputerowe i serwis komputerowy. Swarzędz, Poznań i okolice.</p>
+  </div>
+  <div>
+   <h3>Na stronie</h3>
+   <p><a href="#oferta">Oferta</a></p><p><a href="#cennik">Cennik</a></p><p><a href="#firmy">Dla firm</a></p><p><a href="#pytania">Pytania</a></p>
+  </div>
+  <div>
+   <h3>Kontakt</h3>
+   <p><a href="tel:+48603043430">603 043 430</a></p><p><a href="mailto:serwis@rescomp.pl">serwis@rescomp.pl</a></p><p>ul. Warszawska 38<br>62-020 Swarzędz</p>
+  </div>
+  <div class="dol"><span>© 2026 RESCOMP</span>{{BADGE_LINK}}</div>
+ </div>
+</footer>
+
+<script>
+(function(){
+ var b=document.querySelector('.burger'),d=document.documentElement;
+ b.addEventListener('click',function(){var o=d.classList.toggle('menu-open');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Zamknij menu':'Otwórz menu')});
+ document.querySelectorAll('.nav a').forEach(function(a){a.addEventListener('click',function(){d.classList.remove('menu-open');b.setAttribute('aria-expanded','false')})});
+ var p=document.getElementById('pas'),x0,s0,ruch=false,wcis=false;
+ document.querySelectorAll('.strzalki button').forEach(function(k){k.addEventListener('click',function(){var c=p.querySelector('.karta');p.scrollBy({left:(+k.dataset.kier)*(c.offsetWidth+28),behavior:'smooth'})})});
+ p.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;wcis=true;ruch=false;x0=e.clientX;s0=p.scrollLeft});
+ window.addEventListener('pointermove',function(e){if(!wcis)return;var dx=e.clientX-x0;if(Math.abs(dx)>5){ruch=true;p.classList.add('drag')}if(ruch)p.scrollLeft=s0-dx});
+ window.addEventListener('pointerup',function(){if(!wcis)return;wcis=false;if(ruch){var c=p.querySelector('.karta'),w=c.offsetWidth+28;var t=Math.round(p.scrollLeft/w)*w;p.classList.remove('drag');p.scrollTo({left:t,behavior:'smooth'})}});
+ var m=document.getElementById('mapa');
+ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(en){if(en[0].isIntersecting){m.innerHTML='<iframe title="Mapa dojazdu do serwisu RESCOMP" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="'+m.dataset.src+'"></iframe>';io.disconnect()}},{rootMargin:'300px'});io.observe(m)}
+})();
+</script>
+</body>
+</html>

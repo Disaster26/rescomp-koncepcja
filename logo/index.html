@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RESCOMP - odświeżone logo</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+@font-face{font-family:"Ubuntu Sans";font-weight:400 800;font-display:swap;src:url(../fonts/ubuntusans-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+2013,U+2019,U+201C-201E,U+2022}
+@font-face{font-family:"Ubuntu Sans";font-weight:400 800;font-display:swap;src:url(../fonts/ubuntusans-latin-ext.woff2) format("woff2");unicode-range:U+0100-024F}
+:root{--ink:#1F262D;--cyan:#00ADEF;--szary:#EEF1F4;--linia:#D9DEE3;--ciemny:#14191E}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:#3A434C;font:400 17px/1.6 "Ubuntu Sans",system-ui,sans-serif}
+.wrap{width:min(1180px,100% - 32px);margin:0 auto}
+h1,h2,h3{color:var(--ink);line-height:1.15;letter-spacing:-.015em;margin:0}
+h1{font-size:clamp(32px,4vw,52px)}
+h2{font-size:clamp(24px,2.6vw,34px);margin-bottom:24px}
+h3{font-size:17px;margin-bottom:12px}
+header{padding:48px 0 40px;border-bottom:1px solid var(--linia)}
+header p{max-width:700px;margin:14px 0 0;font-size:18px}
+section{padding:56px 0}
+.pp{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.pole{border-radius:14px;padding:clamp(28px,4vw,56px);display:grid;place-items:center;min-height:240px;position:relative}
+.pole .tag{position:absolute;left:18px;top:14px;font-size:14px;font-weight:600}
+.czarne{background:#000;color:#9AA3AB}
+.biale{background:#fff;border:1px solid var(--linia);color:#5D6772}
+.ciemne{background:var(--ciemny);color:#9AA3AB}
+.szare{background:var(--szary);color:#5D6772}
+.pole img{max-width:100%;height:auto}
+.stare{width:min(380px,100%);image-rendering:auto}
+.nowe{width:min(460px,100%)}
+.siatka{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:28px}
+.ikony{display:flex;align-items:flex-end;gap:22px;flex-wrap:wrap}
+.ikony figure{margin:0;text-align:center;font-size:13px;color:#5D6772}
+.ikony figcaption{margin-top:6px}
+.kolory{display:flex;gap:16px;flex-wrap:wrap}
+.kolor{flex:1 1 150px;border-radius:12px;overflow:hidden;border:1px solid var(--linia)}
+.kolor i{display:block;height:84px}
+.kolor span{display:block;padding:10px 14px;font-size:15px;color:var(--ink)}
+.kolor b{display:block}
+ul.plus{list-style:none;margin:0;padding:0;max-width:860px}
+.plus li{position:relative;padding-left:30px;margin:0 0 14px}
+.plus li::before,.plus li::after{content:"";position:absolute;background:var(--cyan);border-radius:1px}
+.plus li::before{left:4px;top:.8em;width:14px;height:4px;margin-top:-2px}
+.plus li::after{left:9px;top:.8em;width:4px;height:14px;margin-top:-7px}
+.szary{background:var(--szary)}
+.pliki a{color:#0079AD}
+.pliki p{margin:0 0 8px}
+footer{padding:28px 0;font-size:14px;color:#5D6772;border-top:1px solid var(--linia)}
+@media (max-width:760px){.pp,.siatka{grid-template-columns:1fr}.pole{min-height:180px;padding:44px 20px 28px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap">
+  <h1>RESCOMP - odświeżone logo</h1>
+  <p>Odświeżenie, nie nowe logo: zostaje nazwa, znak ekranu z dłonią wynurzającą się z wody i niebieski kolor. Znak jest prostszy, płaski i wektorowy, czytelny od szyldu po ikonę w karcie przeglądarki.</p>
+ </div>
+</header>
+
+<section>
+ <div class="wrap">
+  <h2>Przed i po</h2>
+  <div class="pp">
+   <div class="pole czarne"><span class="tag">Przed (obecna strona)</span><img class="stare" src="przed-logo.png" width="273" height="63" alt="Obecne logo RESCOMP"></div>
+   <div class="pole biale"><span class="tag">Po</span><img class="nowe" src="rescomp-logo.svg" width="460" height="73" alt="Odświeżone logo RESCOMP"></div>
+  </div>
+  <div class="siatka">
+   <div class="pole ciemne"><span class="tag">Wersja na ciemne tło</span><img class="nowe" src="rescomp-logo-jasne.svg" width="460" height="73" alt="Logo RESCOMP w wersji jasnej"></div>
+   <div class="pole biale"><span class="tag">Sygnet</span><img src="rescomp-sygnet.svg" width="150" height="141" alt="Sygnet RESCOMP"></div>
+   <div class="pole ciemne"><span class="tag">Sygnet na ciemne tło</span><img src="rescomp-sygnet-jasny.svg" width="150" height="141" alt="Sygnet RESCOMP w wersji jasnej"></div>
+  </div>
+ </div>
+</section>
+
+<section class="szary">
+ <div class="wrap">
+  <h2>Ikona strony w małych rozmiarach</h2>
+  <div class="pp">
+   <div class="pole biale"><span class="tag">Przed</span>
+    <div class="ikony">
+     <figure><img src="przed-favicon.png" width="48" height="48" alt=""><figcaption>48 px</figcaption></figure>
+     <figure><img src="przed-favicon.png" width="32" height="32" alt=""><figcaption>32 px</figcaption></figure>
+     <figure><img src="przed-favicon.png" width="16" height="16" alt=""><figcaption>16 px</figcaption></figure>
+    </div>
+   </div>
+   <div class="pole biale"><span class="tag">Po</span>
+    <div class="ikony">
+     <figure><img src="favicon-192.png" width="96" height="96" alt=""><figcaption>telefon</figcaption></figure>
+     <figure><img src="favicon.svg" width="48" height="48" alt=""><figcaption>48 px</figcaption></figure>
+     <figure><img src="favicon.svg" width="32" height="32" alt=""><figcaption>32 px</figcaption></figure>
+     <figure><img src="favicon.svg" width="16" height="16" alt=""><figcaption>16 px</figcaption></figure>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <h2>Co zmieniłem i dlaczego</h2>
+  <ul class="plus">
+   <li><b>Ten sam pomysł, prostszy rysunek.</b> Ekran, z którego wynurza się dłoń z wody, to sedno nazwy RESCOMP (ratunek dla komputera). Zostaje, ale bez tłoczenia, cieni i gradientów: płaskie kształty, równa grubość ramki, palce i kciuk z prostych zaokrąglonych brył.</li>
+   <li><b>Woda wyżej i wyraźniej.</b> Niebieskie pole zajmuje dolną część ekranu jak w oryginale, ale ma pełny, czysty kolor #00ADEF, dokładnie ten z obecnego logo.</li>
+   <li><b>"Dziobek" ekranu zostaje.</b> Mały trójkąt pod ramką z obecnego znaku zamienia ekran w dymek wołający o pomoc. Na nowej stronie powtarza się pod każdym zdjęciem.</li>
+   <li><b>Napis w tym samym duchu.</b> Litery zostają szerokie i zaokrąglone jak w obecnym logo, ale rysowane jedną równą kreską, bez efektu 3D. Krzyżyk w literze O (był w oryginale) jest teraz niebieski, jak znak pierwszej pomocy.</li>
+   <li><b>Grafit zamiast szarości.</b> Na jasnym tle napis jest ciemnografitowy (#1F262D), na ciemnym zostaje jasnoszary (#E7E7E8) z obecnego logo. Dzięki temu logo działa na białej stronie, fakturze, naklejce i samochodzie.</li>
+   <li><b>Osobna ikona do małych rozmiarów.</b> W 16-32 px dłoń ma trzy palce zamiast czterech, żeby znak nie zlewał się w plamę.</li>
+  </ul>
+ </div>
+</section>
+
+<section class="szary">
+ <div class="wrap">
+  <h2>Kolory</h2>
+  <div class="kolory">
+   <div class="kolor"><i style="background:#00ADEF"></i><span><b>Niebieski RESCOMP</b>#00ADEF (z obecnego logo)</span></div>
+   <div class="kolor"><i style="background:#1F262D"></i><span><b>Grafit</b>#1F262D</span></div>
+   <div class="kolor"><i style="background:#E7E7E8"></i><span><b>Jasna szarość</b>#E7E7E8 (z obecnego logo)</span></div>
+   <div class="kolor"><i style="background:#14191E"></i><span><b>Tło ciemne</b>#14191E</span></div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap pliki">
+  <h2>Pliki</h2>
+  <p><a href="rescomp-logo.svg">Logo poziome, SVG</a> · <a href="rescomp-logo-jasne.svg">Logo poziome na ciemne tło, SVG</a></p>
+  <p><a href="rescomp-sygnet.svg">Sygnet, SVG</a> · <a href="rescomp-sygnet-jasny.svg">Sygnet na ciemne tło, SVG</a> · <a href="rescomp-logotyp.svg">Sam napis, SVG</a></p>
+  <p><a href="favicon.svg">Ikona strony, SVG</a> · <a href="favicon-48.png">48 px</a> · <a href="favicon-96.png">96 px</a> · <a href="favicon-192.png">192 px</a> · <a href="favicon-180.png">180 px (iPhone)</a> · <a href="favicon-512.png">512 px</a></p>
+  <p><a href="../">Zobacz logo na podglądzie nowej strony</a></p>
+ </div>
+</section>
+<footer><div class="wrap">Projekt odświeżenia logo RESCOMP, 2026.</div></footer>
+</body>
+</html>
